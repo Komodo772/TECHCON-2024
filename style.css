@@ -1,0 +1,310 @@
+
+
+body {
+    background: #122741;
+
+    color: aliceblue;
+    font-family: 'Century Gothic';
+    background-image: url("backgroundimage.png");
+    margin-left: 80px;
+    margin-right: 80px;
+    /* Gives the webpage background a dark blue background with a contrasting white text.
+    Century Gothic is used to make the website look more modern. */
+}
+
+/*NOTE - 
+The general theme of this stylesheet is a dark blue, white colour scheme with slight parts of yellow,
+and very little use of other colours. Font will always need to be Century Gothic as it looks very modern and high-tech.*/
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    /*Sets all images to the center.
+    They will displayed in block format*/
+}
+
+
+
+table, td, tr {
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+    border-style: groove;
+    border-color: #ffffff;
+    background-color: #122741;
+    border-radius: 3px;
+    padding-bottom: 10px;
+
+    /* All content in tables will have centered text and will*/
+
+}
+
+table, p{
+    font-size: smaller;
+    /* Text in tables will be smaller than the standard. */
+}
+
+.verysmalltext{
+    font-size: 8px;
+    /* If smaller text is needed for small borders, articles or tables. (Schedule.html) */
+}
+
+
+#timetable {
+ margin-left: auto;
+ margin-right: auto;
+ padding: 5px, 5px;  
+ /*This is used specifically for the schedule tables. This allows for the table to be placed in the middle */
+}
+
+p {
+    border: 200%;
+    border-color: black;
+    border-radius: 200%;
+    font-size: 125%;
+    padding-top: 0px;
+}
+
+#center{
+    text-align: center;
+    font-weight: bold;
+    border-radius: 40px;
+    border-style: double;
+    background: transparent;
+    border-width: 5px;
+    border-color: #ddd;
+    margin-left: 200px;
+    margin-right: 200px;
+
+    /*Allows for text to be placed in the center. Also used for text with certain importance.*/
+}
+
+#scheduleselect{
+    background-color: rgba(96, 73, 150, 0.661);
+    border-radius: 80px;
+    font-weight: 900;
+    margin-left: 500;
+    margin-right: 500;
+    text-align: center;
+    border-width: 5px;
+    border-style: double;
+}
+
+/* Changes the color of links on hover */
+#scheduleselect:hover {
+background-color: #dddddd;
+color: purple;
+
+}
+  
+
+#scheduledisplayed{
+    font-weight: 900;
+    font-size: 80px;
+    color: rgb(255, 238, 47);
+    text-align: center;
+    background-color: rgba(0, 255, 255, 0.312);
+    border-radius: 0px;
+    border-style: double;
+    border-color: white;
+    border-width: 5px;
+    /*Used for the schedule button that indicates what day's schedule they are looking at.
+    (Friday, Saturday, Sunday)*/
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    color: rgb(219, 240, 65);
+    
+    font-weight: 900;
+    /*All headings are set to a bright yellow contrasting colour of a large size, aligned in the center*/
+}
+
+h2 {
+    text-align: center;
+    font-style: italic;
+}
+
+#subheading{
+    font-weight: 700;
+    color: rgb(255, 242, 0);
+    font-style: italic;
+  
+    font-size: 140%;
+    /*Used for certain <p> elements.
+    Highlights important text*/
+}
+
+#contactinfo{
+    font-weight: 900;
+    color: aqua;
+    font-style:oblique;
+    text-decoration: underline;
+    /*Used in the contact page
+    Highlights text used to contact others at TechCon 2023*/
+}
+
+a:visited {
+    color: orange;
+    background-color: transparent;
+    text-decoration: none;
+    /*Shows text of visited links as orange */
+  }
+
+.borderedtext{
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+    border-style: groove;
+    border-color: #ffffff;
+    background-color: #122741;
+    border-radius: 12px;
+
+    /*Text within a border will always appear in a blue background and border.
+    Text will be centered. Used in multiple pages.*/
+}
+
+.borderedtext h1 {
+    border-style: double;
+    border-width: 5px;
+    border-radius: 30px;
+    background-color: #0476aa;
+    margin-left: 100px;
+    margin-right: 100px;
+    /* REGISTER NOW text on homepage */
+}
+
+article {
+    background-color: rgba(0, 0, 0, 0.342);
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+    border-style: double;
+    /* Article tags are in a smaller border with a transparent dark background */
+}
+
+
+form{
+    text-align: left;
+    font-weight: 600;
+    color: #5dc8f9;
+    margin: 10px
+    /* all forms will have blue text and will be aligned to the left */
+}
+
+
+
+input{
+    width: 100%;
+    background-color: #122741a2;
+    border-style: double;
+    border-color: white;
+    font-family: 'Century Gothic';
+    font-size: 90%;
+    color: #ddd;
+    float: left;
+    padding: 10px;
+    border-width: 5px;
+    /*Inputs are set to the standard stylesheet scheme.*/
+}
+
+input[type="largetext"]{
+    padding: 75px;
+    text-align: left;
+    vertical-align: top;
+}
+
+input[type=date]{
+    width: 40%;
+    background-color: #122741a2;
+    border-style: double;
+    border-color: white;
+    font-family: 'Century Gothic';
+    font-size: 90%;
+    color: #ddd;
+    float: left;
+    padding: 10px;
+    border-width: 5px;
+}
+
+input[type=submit] {
+    width: 50%;
+    background-color: rgba(30, 101, 143, 0.635);
+    border-style: double;
+    border-color: white;
+    font-family: 'Century Gothic';
+    font-weight: 900;
+    font-size: 90%;
+    color: #ffffff;
+    
+    border-width: 8px;
+}
+
+
+#photo {
+    display: block;
+    border-width: 20px;
+    border-style: double;
+    width: 40%;
+    height: 40%;
+
+    /* Photos are shown in 40% width and height so they do not take too much space on the webpages*/
+}
+
+#tablephoto{
+    display: block;
+    border-width: 0px;
+    width: 100%;
+    height: 100%;
+     /* Photos are shown in 100% width and height as they will already be smaller as the tables using this id are
+     already very small. 100% allows it to fill the whole table data box. */
+}
+
+#logo {
+    width: 38%;
+    height: 32%;
+    /* Sets the image of the logo in the home page to a certain width and height to fit the page */
+}
+
+#registersuccess{
+    color: greenyellow;
+}
+.topnav {
+    background-color: rgb(10, 36, 67);
+    overflow: hidden;
+    border-style: double;
+    border-width: 5px;
+
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 16px 14px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .topnav b {
+    float: left;
+    color: #f2f2f2;
+    padding: 0px 0px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #0476aa;
+    color: white;
+  }
