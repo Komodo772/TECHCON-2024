@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <title>Techcon 2023</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        
+
+        <!-- NAVIGATION BAR -->
+        <!-- Allows for user to navigate to each page quickly.-->
+        <div class="topnav">
+            <a href="contact.html">Contact</a>
+            <a href="register.html">Registration</a>
+            <a href="speakers.html">Speakers</a>
+            <a class="active" href="schedule.html">Schedule</a>
+            <!-- Indicates to the user they are currently on the Schedule page.-->
+            <a href="index.html">Home</a>
+            <b href="index.html"> 
+                <img src="techconlogo.png", width="120px", height="55px">
+                <!--Displays the TechCon 2023 Logo on the left hand side of the navigation bar.-->
+            </b>
+         </div>
+         <h1>The Schedule!</h1>
+         <div class="center">
+            <p id="scheduledisplayed">Friday</p>
+         </div>
+
+         <div >
+            <table id="timetable">
+                <tr>
+                    <th>8:00AM</th>
+                    <th>9:00AM</th>
+                    <th>10:00AM</th>
+                    <th>11:00AM</th>
+                    <th>12:00PM</th>
+                    <th>1:00PM</th>
+                    <th>2:00PM</th>
+                    <th>3:00PM</th>
+                    <!--Displays the time for each event. Listed at the top of the schedule as a heading.-->
+                </tr>
+                <tr>
+                    <td><p id="8AM">Registration</p></td>
+                    <td><p id="9AM">Registration</p></td>
+                    <td><p id="10AM">Keynote Address</p></td>
+                    <td><p id="11AM">Breakout Sessions</p></td>
+                    <td><p id="12PM">Lunch</p></td>
+                    <td><p id="1PM">Breakout Sessions</p></td>
+                    <td><p id="2PM">Hands-on-Workshop</p></td>
+                    <td><p id="3PM">Network Reception</p></td>
+                    <!--Displays the name of the event of the hour-->
+                </tr>
+                <tr class="verysmalltext">
+                    <td><p id="8AM2">Kickstart your day with a seamless registration process, ensuring a smooth and efficient entry into the Techcon 2023 experience</p></td>
+                    <td><p id="9AM2"> </p></td>
+                    <td><p id="10AM2">Gain insights into the future of technology and prepare to be inspired by their transformative perspectives.</p></td>
+                    <td><p id="11AM2">Choose from sessions covering artificial intelligence, cybersecurity, cloud computing, data analytics, and more.</p></td>
+                    <td><p id="12PM2">Engage in casual conversations, network with peers, and prepare for the afternoon's agenda.</p></td>
+                    <td><p id="1PM2">Delve further into the world of technology with another round of engaging breakout sessions.</p></td>
+                    <td><p id="2PM2">Immerse yourself in practical learning experiences that will elevate your tech expertise.</p></td>
+                    <td><p id="3PM2">Connect with fellow attendees, exchange ideas, and expand your professional network in an atmosphere of camaraderie and collaborationn</p></td>
+                    <!--Displays a description for the event of the hour-->
+                </tr>
+                <tr>
+                   
+                </tr>
+            </table>
+        </div>
+
+        <p id="scheduleselect">See Saturday's Schedule</p>
+
+         <script>
+            var CurrentScheduleDisplayed = document.getElementById("scheduledisplayed")
+            var ScheduleSelectButton = document.getElementById("scheduleselect")
+
+            console.log(CurrentScheduleDisplayed)
+            function ChangeSchedule(ScheduleSelectButton){
+                if (CurrentScheduleDisplayed.innerHTML == "Friday") {
+                    console.log("was friday, now saturday")
+                    CurrentScheduleDisplayed.innerHTML = "Saturday"
+                    document.getElementById("scheduleselect").innerHTML = "See Sunday's Schedule >>"
+                    //If the current schedule is displaying the friday schedule,
+                    //The schedule will change to Saturdays.
+                    document.getElementById("10AM").innerHTML = "Keynote Address: The Future of Artificial Intelligence"
+                    document.getElementById("11AM").innerHTML = "Breakout Sessions: Cybersecurity"
+                    document.getElementById("12PM").innerHTML = "Lunch"
+                    document.getElementById("1PM").innerHTML = "Breakout Sessions - Robotics"
+                    document.getElementById("2PM").innerHTML = "Hands-on Workshops: AI"
+                    document.getElementById("3PM").innerHTML = "Networking Reception"
+                    //Events are changed to display Saturday's schedule.
+
+                    document.getElementById("10AM2").innerHTML = "Gain insights into the transformative potential of AI and its impact on various industries and aspects of our lives."
+                    document.getElementById("11AM2").innerHTML = "Expand your knowledge, gain practical insights, and discover new perspectives on emerging tech trends."
+                    document.getElementById("12PM2").innerHTML = "Engage in casual conversations, network with peers, and prepare for the afternoon's agenda."
+                    document.getElementById("1PM2").innerHTML = "Expand your knowledge, gain practical insights, and discover new perspectives on emerging tech trends."
+                    document.getElementById("2PM2").innerHTML = "Engage in hands-on workshops, where you'll apply your knowledge and gain valuable skills under the guidance of industry experts."
+                    document.getElementById("3PM2").innerHTML = "Connect with fellow attendees, exchange ideas, and expand your professional network in an atmosphere of camaraderie and collaboration."
+                    //Event descriptions are changed to descriptions of Saturday's schedule.
+
+                } else if (CurrentScheduleDisplayed.innerHTML == "Saturday") {
+                    console.log("was saturday, now sunday")
+                    CurrentScheduleDisplayed.innerHTML = "Sunday"
+                    document.getElementById("scheduleselect").innerHTML = "Go back to Friday's Schedule >>"
+                    //If the current schedule is displaying the Saturday schedule,
+                    //The schedule will change to Sunday.
+
+                    document.getElementById("10AM").innerHTML = "The Ethical Implications of Technological Advancements"
+                    document.getElementById("11AM").innerHTML = "Breakout Sessions:  Human-Computer Interaction"
+                    document.getElementById("12PM").innerHTML = "Lunch"
+                    document.getElementById("1PM").innerHTML = "Breakout Sessions - The Digital Age"
+                    document.getElementById("2PM").innerHTML = "Panel Discussion: The Future of Technology - A Vision for Tomorrow "
+                    document.getElementById("3PM").innerHTML = "Closing Ceremony and Awards"
+                    //Events are changed to display Sunday's schedule.
+
+                    document.getElementById("10AM2").innerHTML = "Engage in a thought-provoking keynote address that explores the ethical considerations and potential consequences of rapid technological advancements."
+                    document.getElementById("11AM2").innerHTML = "Choose from these thought-provoking breakout sessions to gain a broader understanding of the societal implications of technology"
+                    document.getElementById("12PM2").innerHTML = "Engage in discussions, share insights from the morning sessions, and prepare for the afternoon's agenda"
+                    document.getElementById("1PM2").innerHTML = "Delve into the transformative impact of technology on various sectors, including education, healthcare, and transportation."
+                    document.getElementById("2PM2").innerHTML = "Join a panel discussion featuring renowned experts from diverse tech fields as they share their visions for the future of technology."
+                    document.getElementById("3PM2").innerHTML = "Conclude your Techcon 2023 experience with a closing ceremony that celebrates the event's highlights and presents awards to outstanding participants."
+                    //Event descriptions are changed to descriptions of Sunday's schedule.
+
+                } else {
+                    console.log("was sunday, now friday")
+                    CurrentScheduleDisplayed.innerHTML = "Friday"
+                    document.getElementById("scheduleselect").innerHTML = "See Saturday's Schedule >>"
+                    //If the current schedule is displaying the Sunday schedule,
+                    //The schedule will change back to Friday.
+
+                    document.getElementById("10AM").innerHTML = "Keynote Address"
+                    document.getElementById("11AM").innerHTML = "Breakout Sessions"
+                    document.getElementById("12PM").innerHTML = "Lunch"
+                    document.getElementById("1PM").innerHTML = "Breakout Sessions"
+                    document.getElementById("2PM").innerHTML = "Hands-on Workshops"
+                    document.getElementById("3PM").innerHTML = "Networking Reception"
+                    //Events are changed back to display Friday's schedule.
+
+                    document.getElementById("10AM2").innerHTML = "Gain insights into the future of technology and prepare to be inspired by their transformative perspectives."
+                    document.getElementById("11AM2").innerHTML = "Choose from sessions covering artificial intelligence, cybersecurity, cloud computing, data analytics, and more."
+                    document.getElementById("12PM2").innerHTML = "Engage in casual conversations, network with peers, and prepare for the afternoon's agenda."
+                    document.getElementById("1PM2").innerHTML = "Delve further into the world of technology with another round of engaging breakout sessions."
+                    document.getElementById("2PM2").innerHTML = "Engage in hands-on workshops, where you'll apply your knowledge and gain valuable skills under the guidance of industry experts."
+                    document.getElementById("3PM2").innerHTML = "Connect with fellow attendees, exchange ideas, and expand your professional network in an atmosphere of camaraderie and collaboration."
+                    //Event descriptions are changed back to descriptions of Friday's schedule.
+                }
+
+            }
+            ScheduleSelectButton.addEventListener("click",ChangeSchedule)
+            //Calls the function to be used when the button to change schedule is clicked.
+        </script>
+    </body>
+</html>

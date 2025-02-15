@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>Techcon 2023</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <!-- NAVIGATION BAR -->
+        <!-- Allows for user to navigate to each page quickly.-->
+        <div class="topnav">
+            <a href="contact.html">Contact</a>
+            <a class="active" href="register.html">Registration</a>
+            <!-- Indicates to the user they are currently on the Registration page.-->
+            <a href="speakers.html">Speakers</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="index.html">Home</a>
+            <b href="index.html"> 
+                <img src="techconlogo.png", width="120px", height="55px">
+                <!--Displays the TechCon 2023 Logo on the left hand side of the navigation bar.-->
+            </b>
+          </div>
+          <h1>Registration</h1>
+          <div class="borderedtext">
+            <p>Register here!</p>
+            <form name="registrationform">
+
+
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname"><br><br><br><br>
+                <!--Allows user to input text for First Name-->
+
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname"> <br><br><br><br>
+                <!--Allows user to input text for Last Name-->
+
+                <label for="email">Email Address:</label><br>
+                <input type="text" id="email" name="email"> <br><br><br><br>
+                <!--Allows user to input text for an Email Address-->
+
+                <label for="dob">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob"> <br><br><br><br>
+                <!--Allows user to input a date for Birthday-->
+
+                <label for="quantity">How many people are coming with you?:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10"> <br><br><br><br>
+                <!--Allows user to input a number ranging from 1 to 10 for People Quantity-->
+                
+                <input id="registerbutton" type="submit" value="Register"> <br><br><br><br>
+                <!--User can submit their registration with this button-->
+
+                <h1 id="registersuccess"></h1>
+                <p id="registersuccess2"></p>
+            </form>
+            <script>
+                var RegistrationSubmit = document.getElementById("registerbutton") 
+                
+                function RegistrationValidation() {
+
+                    //First Name is checked to see if it's not an empty value.
+                    if (document.forms["registrationform"]["fname"].value == "") {
+
+                        alert("Please enter a first name.")
+                        preventDefault()
+                        //If so, an alert appears and the page will refresh.
+                    }
+
+                    //Last Name is checked to see if it's not an empty value.
+                    if (document.forms["registrationform"]["lname"].value == "") {
+                        alert("Please enter a last name.")
+                        preventDefault()
+                        //If so, an alert appears and the page will refresh.
+                    }
+
+                    //Email Address is checked to see if it's not an empty value.
+                    if (document.forms["registrationform"]["email"].value == "") {
+                        alert("Please enter a valid email.")
+                        preventDefault()
+                        //If so, an alert appears and the page will refresh.
+                    }
+
+                    //Date is checked to see if it's not an empty value AND that it is not past the current date.
+                    const CurrentDate = new Date();
+                    if (document.forms["registrationform"]["dob"].value == "" || document.forms["registrationform"]["dob"].value > CurrentDate) {
+                        alert("Please enter a date of birth.")
+                        preventDefault()
+                        //If so, an alert appears and the page will refresh.
+                    }
+
+                    //Date is checked to see:
+                    //1) it's not an empty value. 
+                    //2) It is not below 1.
+                    //3) It is not above 10.
+                    if (document.forms["registrationform"]["quantity"].value == "" || (document.fonts["registrationform"]["quantity"].value > 1 && document.fonts["registrationform"]["quantity"].value < 11) == false) {
+                        alert("Please enter a number from 1-10.")
+                        preventDefault()
+                        //If so, an alert appears and the page will refresh.
+                    }
+                    document.getElementById("registersuccess").innerHTML = "REGISTRATION COMPLETE!"
+                    document.getElementById("registersuccess2").innerHTML = "Thank you for signing up to TechCon 2023!"
+                }
+
+                RegistrationSubmit.addEventListener("click", RegistrationValidation)
+            </script>
+          </div>
+    </body>
+</html>
